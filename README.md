@@ -86,14 +86,12 @@ sudo pm2 index.js
 
 ## 9. Add domain in Digital Ocean
 In Digital Ocean, go to networking and add a domain
-
+Left Window -- Networking
+Create or choose your domain
 Add an A record for @ and for www to your droplet
 
 
 ## Register and/or setup domain from registrar
-I prefer Namecheap for domains. Please use this affiliate link if you are going to use them
-https://namecheap.pxf.io/c/1299552/386170/5618
-
 Choose "Custom nameservers" and add these 3
 
 * ns1.digitalocean.com
