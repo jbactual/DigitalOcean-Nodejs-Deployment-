@@ -79,7 +79,7 @@ sudo nginx -t
 
 # Restart NGINX
 sudo service nginx start
-sudo pm2 index.js
+sudo pm2 start index.js
 ```
 
 ### You should now be able to visit your IP with no port (port 80) and see your app. Now let's add a domain
