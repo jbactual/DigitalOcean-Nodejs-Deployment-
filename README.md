@@ -75,6 +75,7 @@ Add the following to the location part of the server block
 ```
 ```
 # Check NGINX config
+sudo systemctl reload nginx
 sudo nginx -t
 
 # Restart NGINX
