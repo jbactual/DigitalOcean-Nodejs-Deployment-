@@ -24,13 +24,14 @@ git clone yourproject.git
 cd yourproject
 npm install
 npm start (or whatever your start command)
-# stop app
-ctrl+C
 ```
 ## 6. Setup PM2 process manager to keep your app running
 ```
 sudo npm i pm2 -g
-pm2 start app (or whatever your file name)
+
+
+pm2 start server/index.js     --> filepath
+pm2 start npm -- start        --> nuxt project
 
 # Other pm2 commands
 pm2 show app
