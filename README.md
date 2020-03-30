@@ -28,10 +28,7 @@ npm start (or whatever your start command)
 ## 6. Setup PM2 process manager to keep your app running
 ```
 sudo npm i pm2 -g
-
-
 pm2 start server/index.js     --> filepath
-pm2 start npm -- start        --> nuxt project
 
 # Other pm2 commands
 pm2 show app
@@ -44,6 +41,26 @@ pm2 flush (Clear logs)
 # To make sure app starts when reboot
 pm2 startup ubuntu
 ```
+### PM2 & NUXT --> Source: https://github.com/nuxt/nuxt.js/issues/67
+#### Create ecosystem.config.js
+```
+module.exports = {
+ apps : [
+  {
+  name: "nuxt-prod",
+  script: "npm",
+  args: "run start"
+  }
+ 
+ ]
+}
+```
+
+#### Run
+```
+sudo pm2 start ecosystem.config.js --only nuxt-prod
+```
+
 ### You should now be able to access your app using your IP and port. Now we want to setup a firewall blocking that port and setup NGINX as a reverse proxy so we can access it directly using port 80 (http)
 
 ## 7. Setup ufw firewall
